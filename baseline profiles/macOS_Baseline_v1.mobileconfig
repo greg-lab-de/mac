@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>PayloadContent</key>
+	<array>
+		<dict>
+			<key>ExitCondition</key>
+			<string>/usr/local/Baseline/ExitCondition.txt</string>
+			<key>Installomator</key>
+			<array>
+				<dict>
+					<key>DisplayName</key>
+					<string>Company Portal</string>
+					<key>Label</key>
+					<string>microsoftcompanyportal</string>
+					<key>Subtitle</key>
+					<string>The Company Portal App empowers employees to manage their devices and access company resources efficiently</string>
+				</dict>
+				<dict>
+					<key>DisplayName</key>
+					<string>Microsoft Defender</string>
+					<key>Label</key>
+					<string>microsoftdefender</string>
+					<key>Subtitle</key>
+					<string>Secure your Client with Microsoft Defender</string>
+				</dict>
+				<dict>
+					<key>DisplayName</key>
+					<string>Microsoft Teams</string>
+					<key>Icon</key>
+					<string>/Icons/teams.png</string>
+					<key>Label</key>
+					<string>microsoftteamsnew</string>
+					<key>Subtitle</key>
+					<string>Make Calls and chat with your coworkers</string>
+				</dict>
+				<dict>
+					<key>DisplayName</key>
+					<string>Google Chrome</string>
+					<key>Label</key>
+					<string>googlechrome</string>
+					<key>Subtitle</key>
+					<string>The number one Browser</string>
+				</dict>
+			</array>
+			<key>InstallomatorSwiftDialogIntegration</key>
+			<true/>
+			<key>PayloadDisplayName</key>
+			<string>Baseline #1</string>
+			<key>PayloadIdentifier</key>
+			<string>com.secondsonconsulting.baseline.2613AC8E-A449-4E8A-B77C-31411774B866</string>
+			<key>PayloadType</key>
+			<string>com.secondsonconsulting.baseline</string>
+			<key>PayloadUUID</key>
+			<string>2613AC8E-A449-4E8A-B77C-31411774B866</string>
+			<key>PayloadVersion</key>
+			<integer>1</integer>
+			<key>ProgressBar</key>
+			<true/>
+		</dict>
+	</array>
+	<key>PayloadDisplayName</key>
+	<string>BaselineINtune</string>
+	<key>PayloadIdentifier</key>
+	<string>macAdmins-Virtual-Machine.B1626CE8-D276-4300-A7E3-E1BF817D8D4F</string>
+	<key>PayloadType</key>
+	<string>Configuration</string>
+	<key>PayloadUUID</key>
+	<string>B1626CE8-D276-4300-A7E3-E1BF817D8D4F</string>
+	<key>PayloadVersion</key>
+	<integer>1</integer>
+</dict>
+</plist>
