@@ -7,6 +7,17 @@
 		<dict>
 			<key>ExitCondition</key>
 			<string>/usr/local/Baseline/ExitCondition.txt</string>
+			<key>InitialScripts</key>
+			<array>
+				<dict>
+					<key>DisplayName</key>
+					<string>IconsPKG</string>
+					<key>MD5</key>
+					<string>dc8e31eba93408364d704a800cc6ba13</string>
+					<key>ScriptPath</key>
+					<string>https://github.com/greg-lab-de/mac/blob/main/pkg/InstallIconpkg.sh</string>
+				</dict>
+			</array>
 			<key>Installomator</key>
 			<array>
 				<dict>
