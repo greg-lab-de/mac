@@ -1,10 +1,10 @@
 #!/bin/bash
 
-# URL der .pkg-Datei (achte darauf, dass die URL direkt auf die Datei verweist!)
-PKG_URL="https://raw.githubusercontent.com/greg-lab-de/mac/main/pkg/Icons.pkg"
+# URL der .pkg-Datei (verwende GitHub Releases oder einen direkten Download-Link)
+PKG_URL="https://github.com/greg-lab-de/mac/releases/download/v1.0/Icons.pkg"
 
-# Speicherort der heruntergeladenen Datei (Baseline kann diesen Pfad überschreiben)
-PKG_FILE="/Library/Application Support/Baseline/Icons.pkg"
+# Speicherort der heruntergeladenen Datei
+PKG_FILE="/Library/Baseline/Icons.pkg"
 
 # Funktion für Logging
 log() {
@@ -13,29 +13,29 @@ log() {
 
 log "Starte Download von $PKG_URL ..."
 
-# Herunterladen der .pkg-Datei mit korrektem Exit-Code für Baseline
-curl -L "$PKG_URL" -o "$PKG_FILE" --silent --fail
+# Datei herunterladen und Fehler abfangen
+curl -L --silent --fail "$PKG_URL" -o "$PKG_FILE"
 if [ $? -ne 0 ]; then
-    log "Fehler beim Herunterladen der Datei!"
+    log "❌ Fehler: Download fehlgeschlagen! Prüfe die URL oder ob die Datei existiert."
     exit 1
 fi
 
-log "Download erfolgreich: $PKG_FILE"
+log "✅ Download erfolgreich: $PKG_FILE"
 
-# Prüfen, ob die Datei existiert
+# Prüfen, ob die Datei wirklich existiert
 if [ ! -f "$PKG_FILE" ]; then
-    log "Fehler: Paketdatei nicht gefunden!"
+    log "❌ Fehler: Paketdatei nicht gefunden!"
     exit 1
 fi
 
-log "Starte Installation ..."
+log "🚀 Starte Installation ..."
 
-# Installation der .pkg-Datei
+# Installation starten
 sudo installer -pkg "$PKG_FILE" -target /
 if [ $? -eq 0 ]; then
-    log "Installation erfolgreich."
+    log "✅ Installation erfolgreich."
     exit 0
 else
-    log "Fehler bei der Installation."
+    log "❌ Fehler bei der Installation."
     exit 1
 fi
