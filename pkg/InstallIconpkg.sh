@@ -1,55 +1,26 @@
 #!/bin/bash
 
-# URL der .pkg-Datei (verwende GitHub Releases oder einen direkten Download-Link)
+# URL der .pkg-Datei
 PKG_URL="https://github.com/greg-lab-de/mac/releases/download/production/Icons.pkg"
+# Zielverzeichnis
+PKG_FILE="/tmp/Icons.pkg"
 
-# Speicherort der heruntergeladenen Datei
-PKG_FILE="/Library/Baseline/Icons.pkg"
+# Herunterladen der .pkg-Datei
+curl -L "$PKG_URL" -o "$PKG_FILE"
 
-# Speicherort der Log-Datei
-LOG_DIR="/Library/IntuneScripts/Baseline/InitialScripts"
-LOG_FILE="$LOG_DIR/install.log"
-
-# Sicherstellen, dass das Log-Verzeichnis existiert
-if [ ! -d "$LOG_DIR" ]; then
-    sudo mkdir -p "$LOG_DIR"
-    sudo chmod 755 "$LOG_DIR"
-fi
-
-# Sicherstellen, dass die Log-Datei existiert
-if [ ! -f "$LOG_FILE" ]; then
-    sudo touch "$LOG_FILE"
-    sudo chmod 644 "$LOG_FILE"
-fi
-
-# Funktion für Logging
-log() {
-    echo "$(date '+%Y-%m-%d %H:%M:%S') [Baseline] $1" | tee -a "$LOG_FILE"
-}
-
-log "Starte Download von $PKG_URL ..."
-
-# Datei herunterladen und Fehler abfangen
-if ! sudo curl -L --silent --fail "$PKG_URL" -o "$PKG_FILE"; then
-    log "❌ Fehler: Download fehlgeschlagen! Prüfe die URL oder ob die Datei existiert."
-    exit 1
-fi
-
-log "✅ Download erfolgreich: $PKG_FILE"
-
-# Prüfen, ob die Datei wirklich existiert
-if [ ! -f "$PKG_FILE" ]; then
-    log "❌ Fehler: Paketdatei nicht gefunden!"
-    exit 1
-fi
-
-log "🚀 Starte Installation ..."
-
-# Installation starten
-if sudo installer -pkg "$PKG_FILE" -target /; then
-    log "✅ Installation erfolgreich."
-    exit 0
+# Überprüfen, ob der Download erfolgreich war
+if [ -f "$PKG_FILE" ]; then
+    echo "Download erfolgreich: $PKG_FILE"
+    
+    # Installation der .pkg-Datei
+    sudo installer -pkg "$PKG_FILE" -target /
+    
+    # Überprüfen, ob die Installation erfolgreich war
+    if [ $? -eq 0 ]; then
+        echo "Installation erfolgreich."
+    else
+        echo "Fehler bei der Installation."
+    fi
 else
-    log "❌ Fehler bei der Installation."
-    exit 1
+    echo "Fehler beim Download der Datei."
 fi
