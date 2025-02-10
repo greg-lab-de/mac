@@ -5,54 +5,55 @@
 	<key>PayloadContent</key>
 	<array>
 		<dict>
+			<key>DialogListOptions</key>
+			<string>&lt;key&gt;DialogListOptions&lt;/key&gt;&lt;string&gt;--title "This is a Custom Title" --overlayicon "/System/Applications/System Settings.app"&lt;/string&gt;&lt;key&gt;DialogFailureOptions&lt;/key&gt;&lt;string&gt;--icon "SF=desktopcomputer.trianglebadge.exclamationmark,color=red"&lt;/string&gt;
+&lt;string&gt;--title "This is a Custom Title" --overlayicon "/System/Applications/System Settings.app"&lt;/string&gt;
+&lt;key&gt;DialogFailureOptions&lt;/key&gt;
+&lt;string&gt;--icon "SF=desktopcomputer.trianglebadge.exclamationmark,color=red"&lt;/string&gt;</string>
+			<key>DialogSuccessOptions</key>
+			<string>&lt;key&gt;DialogListOptions&lt;/key&gt;&lt;string&gt;--title "Greg Lab macOS Client" --overlayicon "/System/Applications/System Settings.app"&lt;/string&gt;&lt;key&gt;DialogFailureOptions&lt;/key&gt;&lt;string&gt;--icon "SF=desktopcomputer.trianglebadge.exclamationmark,color=red"&lt;/string&gt;</string>
 			<key>ExitCondition</key>
-			<string>/usr/local/Baseline/ExitCondition.txt</string>
+			<string>/Applications/Microsoft Teams.app</string>
+			<key>IgnoreDefaultInstallomatorOptions</key>
+			<true/>
 			<key>InitialScripts</key>
 			<array>
 				<dict>
 					<key>DisplayName</key>
-					<string>IconsPKG</string>
+					<string>Icons</string>
 					<key>MD5</key>
 					<string>d3fe9c642bd2362778ff3c178883c43b</string>
 					<key>ScriptPath</key>
-					<string>https://github.com/greg-lab-de/mac/blob/main/pkg/InstallIconpkg.sh</string>
+					<string>https://raw.githubusercontent.com/greg-lab-de/mac/refs/heads/main/pkg/InstallIconpkg.sh</string>
 				</dict>
 			</array>
 			<key>Installomator</key>
 			<array>
 				<dict>
 					<key>DisplayName</key>
-					<string>Company Portal</string>
+					<string>CompanyPortal</string>
 					<key>Label</key>
 					<string>microsoftcompanyportal</string>
-					<key>Subtitle</key>
-					<string>The Company Portal App empowers employees to manage their devices and access company resources efficiently</string>
-				</dict>
-				<dict>
-					<key>DisplayName</key>
-					<string>Microsoft Defender</string>
-					<key>Label</key>
-					<string>microsoftdefender</string>
-					<key>Subtitle</key>
-					<string>Secure your Client with Microsoft Defender</string>
-				</dict>
-				<dict>
-					<key>DisplayName</key>
-					<string>Microsoft Teams</string>
-					<key>Icon</key>
-					<string>/Icons/teams.png</string>
-					<key>Label</key>
-					<string>microsoftteamsnew</string>
-					<key>Subtitle</key>
-					<string>Make Calls and chat with your coworkers</string>
 				</dict>
 				<dict>
 					<key>DisplayName</key>
 					<string>Google Chrome</string>
 					<key>Label</key>
 					<string>googlechrome</string>
-					<key>Subtitle</key>
-					<string>The number one Browser</string>
+				</dict>
+				<dict>
+					<key>DisplayName</key>
+					<string>Microsoft Teams</string>
+					<key>Icon</key>
+					<string>/usr/local/Baseline/Icons/teams.png</string>
+					<key>Label</key>
+					<string>microsoftteamsnew</string>
+				</dict>
+				<dict>
+					<key>DisplayName</key>
+					<string>Microsoft Defender</string>
+					<key>Label</key>
+					<string>microsoftdefender|\microsoftdefenderatp</string>
 				</dict>
 			</array>
 			<key>InstallomatorSwiftDialogIntegration</key>
@@ -69,10 +70,14 @@
 			<integer>1</integer>
 			<key>ProgressBar</key>
 			<true/>
+			<key>ProgressBarDisplayNames</key>
+			<true/>
+			<key>Restart</key>
+			<false/>
 		</dict>
 	</array>
 	<key>PayloadDisplayName</key>
-	<string>BaselineINtune</string>
+	<string>Untitled</string>
 	<key>PayloadIdentifier</key>
 	<string>macAdmins-Virtual-Machine.B1626CE8-D276-4300-A7E3-E1BF817D8D4F</string>
 	<key>PayloadType</key>
