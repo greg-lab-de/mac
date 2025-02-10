@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # URL der .pkg-Datei (verwende GitHub Releases oder einen direkten Download-Link)
-PKG_URL="https://github.com/greg-lab-de/mac/releases/download/v1.0/Icons.pkg"
+PKG_URL="https://github.com/greg-lab-de/mac/releases/download/production/Icons.pkg"
 
 # Speicherort der heruntergeladenen Datei
 PKG_FILE="/Library/Baseline/Icons.pkg"
@@ -14,7 +14,7 @@ log() {
 log "Starte Download von $PKG_URL ..."
 
 # Datei herunterladen und Fehler abfangen
-curl -L --silent --fail "$PKG_URL" -o "$PKG_FILE"
+sudo curl -L --silent --fail "$PKG_URL" -o "$PKG_FILE"
 if [ $? -ne 0 ]; then
     log "❌ Fehler: Download fehlgeschlagen! Prüfe die URL oder ob die Datei existiert."
     exit 1
