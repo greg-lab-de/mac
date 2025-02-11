@@ -73,3 +73,4 @@ echo "Adding $adminaccountname to hidden users list"
 sudo defaults write /Library/Preferences/com.apple.loginwindow HiddenUsersList -array-add "$adminaccountname"
 sudo sysadminctl -deleteUser "$adminaccountname" # Remove existing admin account if it exists
 sudo sysadminctl -adminUser "$adminaccountname" -adminPassword "$p" -addUser "$adminaccountname" -fullName "$adminaccountfullname" -password "$p" -admin
+echo "Das Passwort wurde auf $p gesetzt"

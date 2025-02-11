@@ -32,14 +32,22 @@
 				<dict>
 					<key>DisplayName</key>
 					<string>CompanyPortal</string>
+					<key>Icon</key>
+					<string>/usr/local/Baseline/Icons/companyportal.png</string>
 					<key>Label</key>
 					<string>microsoftcompanyportal</string>
+					<key>Subtitle</key>
+					<string>Access your Devices and apps.</string>
 				</dict>
 				<dict>
 					<key>DisplayName</key>
 					<string>Google Chrome</string>
+					<key>Icon</key>
+					<string>/usr/local/Baseline/Icons/chrome.png</string>
 					<key>Label</key>
 					<string>googlechrome</string>
+					<key>Subtitle</key>
+					<string>Additional Browser</string>
 				</dict>
 				<dict>
 					<key>DisplayName</key>
@@ -48,12 +56,18 @@
 					<string>/usr/local/Baseline/Icons/teams.png</string>
 					<key>Label</key>
 					<string>microsoftteamsnew</string>
+					<key>Subtitle</key>
+					<string>Communicate with your Coworkers</string>
 				</dict>
 				<dict>
 					<key>DisplayName</key>
 					<string>Microsoft Defender</string>
+					<key>Icon</key>
+					<string>/usr/local/Baseline/Icons/defender.png</string>
 					<key>Label</key>
 					<string>microsoftdefender|\microsoftdefenderatp</string>
+					<key>Subtitle</key>
+					<string>Secure your mac!</string>
 				</dict>
 			</array>
 			<key>InstallomatorSwiftDialogIntegration</key>
