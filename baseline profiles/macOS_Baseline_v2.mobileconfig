@@ -6,12 +6,9 @@
 	<array>
 		<dict>
 			<key>DialogListOptions</key>
-			<string>&lt;key&gt;DialogListOptions&lt;/key&gt;&lt;string&gt;--title "This is a Custom Title" --overlayicon "/System/Applications/System Settings.app"&lt;/string&gt;&lt;key&gt;DialogFailureOptions&lt;/key&gt;&lt;string&gt;--icon "SF=desktopcomputer.trianglebadge.exclamationmark,color=red"&lt;/string&gt;
-&lt;string&gt;--title "This is a Custom Title" --overlayicon "/System/Applications/System Settings.app"&lt;/string&gt;
-&lt;key&gt;DialogFailureOptions&lt;/key&gt;
-&lt;string&gt;--icon "SF=desktopcomputer.trianglebadge.exclamationmark,color=red"&lt;/string&gt;</string>
+			<string>--title "Greg Lab macOS Client" --overlayicon "/System/Applications/System Settings.app"</string>
 			<key>DialogSuccessOptions</key>
-			<string>&lt;key&gt;DialogListOptions&lt;/key&gt;&lt;string&gt;--title "Greg Lab macOS Client" --overlayicon "/System/Applications/System Settings.app"&lt;/string&gt;&lt;key&gt;DialogFailureOptions&lt;/key&gt;&lt;string&gt;--icon "SF=desktopcomputer.trianglebadge.exclamationmark,color=red"&lt;/string&gt;</string>
+			<string>--title "Greg Lab macOS Client" --overlayicon "/System/Applications/System Settings.app"</string>
 			<key>ExitCondition</key>
 			<string>/Applications/Microsoft Teams.app</string>
 			<key>IgnoreDefaultInstallomatorOptions</key>
@@ -65,9 +62,19 @@
 					<key>Icon</key>
 					<string>/usr/local/Baseline/Icons/defender.png</string>
 					<key>Label</key>
-					<string>microsoftdefender|\microsoftdefenderatp</string>
+					<string>microsoftdefenderatp</string>
 					<key>Subtitle</key>
 					<string>Secure your mac!</string>
+				</dict>
+				<dict>
+					<key>DisplayName</key>
+					<string>Privileges</string>
+					<key>Icon</key>
+					<string>/usr/local/Baseline/Icons/privileges.png</string>
+					<key>Label</key>
+					<string>privileges2</string>
+					<key>Subtitle</key>
+					<string>Get temporary Admin permissions.</string>
 				</dict>
 			</array>
 			<key>InstallomatorSwiftDialogIntegration</key>
